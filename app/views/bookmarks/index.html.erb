@@ -1,0 +1,7 @@
+<h1>Bookamrks</h1>
+
+<ul>
+<% @list.bookmarks.each do |b| %>
+  <li>Okay -> <%= b.comment %> | <%= b.movie_id %> </li>
+<% end %>
+</ul>
