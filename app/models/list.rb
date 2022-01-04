@@ -1,5 +1,7 @@
 class List < ApplicationRecord
-  validates :name, uniqueness: true, length: { minimum: 1 }
-  has_many :bookmarks
-  has_many :movies, through: :bookmarks, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  has_many :movies, through: :bookmarks
+  has_many :reviews
+
+  validates :name, uniqueness: true, presence: true
 end
